@@ -11,59 +11,61 @@
 <body>
     <main>
         <h1>Contact Us</h1>
-        <form class="form">
-            <fieldset class="username">
+        <form class="contact-form" id="contact-form">
+        <fieldset class="personal-info">
+            <div class="username">
                 <div class="name-container">
                     <label for="first-name">First Name *</label>
-                    <input type="text" class="first-name" id="first-name" name="first-name">
+                    <input type="text" class="name" id="first-name" name="first-name">
+                    <p class="error-message" id="first-name-error">This field is required</p>
                 </div>
 
                 <div class="name-container">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" class="last-name" id="last-name" name="last-name">
+                    <input type="text" class="name" id="last-name" name="last-name">
+                    <p class="error-message" id="last-name-error">This field is required</p>
                 </div>
-            </fieldset>
+            </div>
 
             <div>
                 <label for="email">Email Address *</label>
                 <input type="email" class="email" id="email" name="email" placeholder="example@domain.com">
+                <p class="error-message" id="email-error">Please enter a valid email address</p>
             </div>
 
-            <fieldset class="query-type">
-                <legend>Query Type *</legend>
-                <div class="query-options">
-                    <div class="enquiry">
-                        <input type="radio" name="query-type" class="general-enquiry" id="general-enquiry" value="general">
-                        <label for="general-enquiry">General Enquiry</label>
-                    </div>
-                    <div class="enquiry">
-                        <input type="radio" name="query-type" class="support-request" id="support-request" value="support">
-                        <label for="support-request">Support Request</label>
-                    </div>
+        </fieldset>
+
+        <fieldset class="query-type">
+            <legend>Query Type *</legend>
+            <div class="query-options">
+                <div class="enquiry">
+                    <input type="radio" name="query-type" class="query-type" id="general-query" value="general">
+                    <label class="query-label" for="general-query">General Enquiry</label>
                 </div>
-            </fieldset>
-
-            <!--<fieldset id="solutions-group">
-                <legend>Desired Solution</legend>
-                <input type="radio" name="solutions" id="refund" value="refund">
-                <label for="refund">General Enquiry</label>
-
-                <input type="radio" name="solutions" id="exchange" value="exchange">
-                <label for="exchange">General Enquiry</label>
-            </fieldset>-->
-            <div>
-                <label for="message">Message *</label>
-                <input type="text" class="message" id="message" name="message">
+                <div class="enquiry">
+                    <input type="radio" name="query-type" class="query-type" id="support-request" value="support">
+                    <label class="query-label" for="support-request">Support Request</label>
+                </div>
             </div>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+            <p class="error-message" id="query-error">Please select a query type</p>
+        </fieldset>
 
+        <fieldset id="message-container">
+            <label for="message">Message *</label>
+            <textarea class="message" id="message" name="message"></textarea>
+            <p class="error-message" id="message-error">This field is required</p>
+        </fieldset>
+        <fieldset class="consent-container">
+            <input type="checkbox" class="consent-check" id="consent-check" name="consent-check">
+            <label class="consent-check-label" for="consent-check">I consent to being contacted by the team.*</label>
+            <p class="error-message" id="consent-error">To submit this form, please consent to being contacted</p>
+        </fieldset>
+        <div id="btn-container">
+            <button type="submit" id="submit-btn">Submit</button>
+            <span id="message-box" aria-live="polite"></span>
+        </div>
+    </form>
     </main>
-    
-    <!--<div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.-->
-    <!--</div>-->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
