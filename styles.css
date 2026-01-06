@@ -19,7 +19,15 @@ html {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'Karla';
+    src: url('./assets/fonts/Karla-VariableFont_wght.ttf');
+    font-weight: 400 700;
+    font-stretch: 25% 151%;
+}
+
 body {
+    font-family: Karla, sans-serif;
     display: flex;
     min-height: 100vh;
     min-width: 100vw;
@@ -27,9 +35,11 @@ body {
     align-items: center;
     background-color: var(--green-200);
 }
-
+h1 {
+    margin-bottom: 2rem;
+}
 main {
-    width: clamp(15rem, 80%, 30rem);
+    width: clamp(15rem, 80%, 40rem);
     gap: 1rem;
     padding: 1rem;
     background-color: var(--white);
@@ -55,14 +65,21 @@ input[type="text"], input[type="email"]{
     margin-bottom: 1.2rem;
     margin-top: 0.3rem;
 }
+
 .username {
     display: flex;
     flex-direction: column;
 }
+
+.name-container {
+    width: 100%;
+}
+
 .query-options {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 0.3rem;
 }
 
 .query-options .enquiry {
