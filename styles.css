@@ -1,0 +1,94 @@
+:root {
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+}
+
+html {
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green-200);
+}
+
+main {
+    width: clamp(15rem, 80%, 30rem);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 0.8rem;
+}
+
+.form {
+    margin: auto;
+}
+
+fieldset {
+    border: 0;
+}
+
+input[type="text"], input[type="email"], button {
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid var(--grey-900);
+    border-radius: 0.2rem;
+}
+
+input[type="text"], input[type="email"]{
+    margin-bottom: 1.2rem;
+    margin-top: 0.3rem;
+}
+.username {
+    display: flex;
+    flex-direction: column;
+}
+.query-options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.query-options .enquiry {
+    border: 1px solid var(--grey-900);
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media screen and (width >= 53rem) {
+    .username {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .query-options {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
