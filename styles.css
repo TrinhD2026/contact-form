@@ -140,6 +140,10 @@ fieldset {
     padding: 0.4rem 0 0 1rem;
 }
 
+.query-label:hover {
+    border-color: var(--green-600);
+}
+
 .error-message {
     display: none;
     color: var(--red);
